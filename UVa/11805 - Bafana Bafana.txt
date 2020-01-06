@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int test,n,k,p,c;
+    cin>>test;
+    for(int i=1; i<=test; i++)
+    {
+        cin>>n>>k>>p;
+        c=k+p;
+        if(c>n)
+            c%=n;
+        if(c%n==0)
+        c=n;
+        cout<<"Case "<<i<<": "<<c<<endl;
+    }
+
+}

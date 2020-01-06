@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,m,a,b,s1,s2;
+    cin>>n>>m>>a>>b;
+    s1=n/m*b+n%m*a;
+    s2=(n/m+1)*b;
+
+    if(n*a<=s1 && n*a<=s2)
+        cout<<n*a<<endl;
+    else
+    {
+        if(s1<=s2)
+            cout<<s1<<endl;
+        else
+            cout<<s2<<endl;
+    }
+
+}

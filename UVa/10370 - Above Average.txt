@@ -1,0 +1,27 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    double m[1001],n;
+    cin>>t;
+    for(int i=0; i<t; i++)
+    {
+        double av=0,c=0;
+        cin>>n;
+        for(int j=0; j<n; j++)
+        {
+            cin>>m[j];
+            av+=m[j];
+        }
+        av/=n;
+        for(int j=0; j<n; j++)
+        {
+            if(m[j]>av)
+                c++;
+        }
+        printf("%.3lf%%\n",c/n*100.0);
+    }
+}

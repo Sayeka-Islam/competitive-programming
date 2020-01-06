@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main()
+{
+    long long int ter;
+    while(1)
+    {
+        scanf("%lld",&ter);
+        if(ter<0)
+            break;
+        long long int rem[100],i=0;
+        while(1)
+        {
+            if(ter<3)
+                break;
+            rem[i]=ter%3;
+            ter/=3;
+            i++;
+        }
+        printf("%lld",ter);
+        while(i--)
+            printf("%lld",rem[i]);
+
+        printf("\n");
+    }
+}

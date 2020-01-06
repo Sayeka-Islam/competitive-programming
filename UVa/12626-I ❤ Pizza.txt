@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,l;
+    string st;
+    cin>>t;
+    for(int j=0; j<t; j++)
+    {
+        int m=0,a=0,g=0,t=0,i=0,r=0,pizz[6];
+        cin>>st;
+        l=st.length();
+        for(int k=0; k<l; k++)
+        {
+            if(st[k]=='A')
+                a++;
+            else if(st[k]=='M')
+                m++;
+            else if(st[k]=='G')
+                g++;
+            else if(st[k]=='I')
+                i++;
+            else if(st[k]=='R')
+                r++;
+            else if(st[k]=='T')
+                t++;
+        }
+        a/=3;
+        r/=2;
+        pizz[0]=a;
+        pizz[1]=m;
+        pizz[2]=g;
+        pizz[3]=i;
+        pizz[4]=r;
+        pizz[5]=t;
+        sort(pizz,pizz+6);
+        cout<<pizz[0]<<endl;
+    }
+}

@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    long long int ha,op;
+    while ( scanf("%lld %lld",&ha,&op) == 2)
+    {
+        if(ha>op)
+            printf("%lld\n",ha-op);
+        else
+            printf("%lld\n",op-ha);
+    }
+    return 0;
+}

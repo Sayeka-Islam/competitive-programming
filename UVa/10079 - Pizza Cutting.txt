@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+int main()
+{
+    long long int n,i,s;
+    while(1)
+    {
+        scanf("%lld",&n);
+        if(n<0)
+            break;
+        s=1;
+        for(i=1; i<=n; i++)
+        {
+            s+=i;
+        }
+        printf("%lld\n",s);
+    }
+    return 0;
+}

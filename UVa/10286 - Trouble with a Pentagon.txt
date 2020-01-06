@@ -1,0 +1,13 @@
+#include<iostream>
+#include<cstdio>
+using namespace std;
+
+int main()
+{
+    long double f;
+    while(cin>>f && f!=EOF)
+    {
+        printf("%.10llf\n",f*1.067395681711182);    ///sin(72)/sin(63)
+    }
+}
+s

@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b,c,tem;
+    cin>>a>>b>>c;
+    if(a<b)
+    {
+        tem=b;
+        b=a;
+        a=tem;
+    }
+    if(b<c)
+    {
+        tem=b;
+        b=c;
+        c=tem;
+    }
+    if(a<b)
+    {
+        tem=b;
+        b=a;
+        a=tem;
+    }
+    cout<<a-c<<endl;
+}

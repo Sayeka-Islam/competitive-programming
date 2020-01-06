@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,m,c,mi=0,ci=0;
+    cin>>n;
+    for(int i=0; i<n; i++)
+    {
+        cin>>m>>c;
+        if(c>m)
+            ci++;
+        else if(m>c)
+            mi++;
+    }
+    if(ci>mi)
+        cout<<"Chris"<<endl;
+    else if(mi>ci)
+        cout<<"Mishka"<<endl;
+    else if(mi==ci)
+        cout<<"Friendship is magic!^^"<<endl;
+}

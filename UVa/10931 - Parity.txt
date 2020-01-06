@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int decToBinary(int n)
+{
+    int c=0;
+    int bin[32];
+    int i = 0;
+    while (n > 0)
+    {
+        if(n % 2)
+        {
+            bin[i] = 1;
+            c++;
+        }
+        else
+            bin[i]=0;
+        n = n / 2;
+        i++;
+
+    }
+    for(int j=i-1; j>=0; j--)
+        cout<<bin[j];
+    return c;
+}
+int main()
+{
+    ll n,c;
+    while(1)
+    {
+        cin>>n;
+        if(n==0)
+            break;
+        cout<<"The parity of ";
+        c=decToBinary(n);
+        cout<<" is "<<c<<" (mod 2)."<<endl;
+    }
+    return 0;
+}

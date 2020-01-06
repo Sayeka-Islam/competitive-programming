@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n,c=0;
+    while(cin>>n && n>=0)
+    {
+        c++;
+        int s=1,y=0;
+        for(int i=1;; i++)
+        {
+            if(s>=n)
+                break;
+            s=s*2;
+            y++;
+        }
+        cout<<"Case "<<c<<": "<<y<<endl;
+
+    }
+}

@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string h;
+    for(int c=1;; c++)
+    {
+        cin>>h;
+        if(h=="#")
+            break;
+        if(h=="HELLO")
+            cout<<"Case "<<c<<": ENGLISH"<<endl;
+        else if(h=="HOLA")
+            cout<<"Case "<<c<<": SPANISH"<<endl;
+        else if(h=="HALLO")
+            cout<<"Case "<<c<<": GERMAN"<<endl;
+        else if(h=="BONJOUR")
+            cout<<"Case "<<c<<": FRENCH"<<endl;
+        else if(h=="CIAO")
+            cout<<"Case "<<c<<": ITALIAN"<<endl;
+        else if(h=="ZDRAVSTVUJTE")
+            cout<<"Case "<<c<<": RUSSIAN"<<endl;
+        else
+            cout<<"Case "<<c<<": UNKNOWN"<<endl;
+    }
+}

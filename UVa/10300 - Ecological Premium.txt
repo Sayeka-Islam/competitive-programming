@@ -1,0 +1,22 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+int main()
+{
+    int n,f,siz,num,en,i;
+    while(scanf("%d",&n)!=EOF)
+    {
+        while(n--)
+        {
+            int s=0;
+            cin>>f;
+            while(f--)
+            {
+                cin>>siz>>num>>en;
+                s+=siz*en;
+            }
+            cout<<s<<endl;
+        }
+    }
+}

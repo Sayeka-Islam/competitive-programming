@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    while(cin>>t)
+    {
+        int x[t],a[t];
+        bool c=true;
+        for(int i=0; i<t; i++)
+            cin>>x[i];
+
+        for(int i=0; i<t-1; i++)
+        {
+            a[i]=x[i]-x[i+1];
+            if(a[i]<0)
+                a[i]*=(-1);
+        }
+        sort(a,a+t-1);
+        for(int i=0; i<t-1; i++)
+        {
+            if(a[i]!=i+1)
+                {
+                    c=false;
+                    break;
+                }
+        }
+        if(c)
+            cout<<"Jolly"<<endl;
+        else
+            cout<<"Not jolly"<<endl;
+    }
+}

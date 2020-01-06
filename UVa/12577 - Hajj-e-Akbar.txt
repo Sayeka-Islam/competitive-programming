@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int c=0;
+    string st;
+    while(1)
+    {c++;
+        cin>>st;
+        if(st=="*")
+            break;
+        if(st=="Hajj")
+            cout<<"Case "<<c<<": Hajj-e-Akbar"<<endl;
+        else if(st=="Umrah")
+            cout<<"Case "<<c<<": Hajj-e-Asghar"<<endl;
+    }
+}

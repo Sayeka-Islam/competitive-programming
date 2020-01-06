@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    float a,b,c,d,e,f,avg;
+    scanf("%f %f %f %f",&a,&b,&c,&d);
+
+    avg=(a*2+b*3+c*4+d*1)/(2+3+4+1);
+
+    if (avg>=7.0){
+        printf("Media: %.1f\n",avg);
+        printf("Aluno aprovado.\n");
+    }
+
+    if (avg<5.0){
+        printf("Media: %.1f\n",avg);
+        printf("Aluno reprovado.\n");
+    }
+
+    if (avg>=5.0 && avg<=6.9){
+           printf("Media: %.1f\n",avg);
+            printf("Aluno em exame.\n");
+            }
+
+        scanf("%f",e);
+        printf("Nota do exame: %f\n",e);
+        f=(avg+e)/2;
+        printf("Aluno aprovado.\n");
+        printf("Media final: %1.f\n",f);
+
+
+    return 0;
+}

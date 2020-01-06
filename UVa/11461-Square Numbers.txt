@@ -1,0 +1,22 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    long int a,b;
+    while(1)
+    {
+        long int c=0,x;
+        cin>>a>>b;
+        if(a==0 && b==0)
+            break;
+        for(int i=a;i<=b;i++)
+        {
+            x=sqrt(i);
+            if(i==x*x)
+                c++;
+        }
+        cout<<c<<endl;
+    }
+}
