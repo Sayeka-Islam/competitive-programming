@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+    long long int n;
+    scanf("%lld",&n);
+    long long int f[n],m,i;
+    scanf("%lld",&f[0]);
+    m=f[0];
+    for(i=1; i<n; i++)
+    {
+        scanf("%lld",&f[i]);
+        if(m<f[i])
+            m=f[i];
+    }
+    printf("%lld\n",m);
+}

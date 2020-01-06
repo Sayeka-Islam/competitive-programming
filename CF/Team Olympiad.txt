@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n],p=0,m=0,pe=0,pr[n],math[n],PE[n],low;
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+        if(a[i]==1)
+        {
+            pr[p]=i+1;
+            p++;
+        }
+        else if(a[i]==2)
+        {
+            math[m]=i+1;
+            m++;
+        }
+        else if(a[i]==3)
+        {
+            PE[pe]=i+1;
+            pe++;
+        }
+    }
+
+
+    if(p<m && p<pe)
+        low=p;
+    else if(p>m && m<pe)
+        low=m;
+    else if(pe<m && p>pe)
+        low=pe;
+    else if(p==m && p==pe)
+        low=p;
+    else if(p==m && p<pe)
+        low=p;
+        else if(pe==m && p>pe)
+        low=pe;
+        else if(p==pe && p<m)
+        low=p;
+        cout<<low<<endl;
+
+     if(low>0)
+     {
+         for(int i=0; i<low; i++)
+             cout<<pr[i]<<" "<<math[i]<<" "<<PE[i]<<endl;
+     }
+
+}
