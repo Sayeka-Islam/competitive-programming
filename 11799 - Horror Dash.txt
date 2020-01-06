@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,n,c[10000];
+    cin>>t;
+    for(int i=1;i<=t;i++)
+    {
+        cin>>n;
+        for(int j=0;j<n;j++)
+        {
+            cin>>c[j];
+        }
+        sort(c,c+n);
+        printf("Case %d: %d\n",i,c[n-1]);
+    }
+}
