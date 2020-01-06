@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int a,int b)
+{
+    if(b==0)
+        return a;
+    else
+        return gcd(b,a%b);
+}
+
+int main()
+{
+    string s1,s2;
+    long int t,a,b;
+    cin>>t;
+    for(int i=1; i<=t; i++)
+    {
+        cin>>s1>>s2;
+        a=strtoull(s1.c_str(),NULL,2);///strtoull(string,end(null),base)
+        b=strtoull(s2.c_str(),NULL,2);///(c_str---pointer type..full string)
+
+        if(gcd(a,b)>1)
+            cout<<"Pair #"<<i<<": All you need is love!"<<endl;
+        else
+            cout<<"Pair #"<<i<<": Love is not all you need!"<<endl;
+    }
+}

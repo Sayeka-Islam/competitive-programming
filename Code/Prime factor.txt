@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int n,i,sq;
+    cout<<"Enter a number:"<<endl;
+    cin>>n;
+    sq=sqrt(n);
+    for(i=2; i<=sq; i++)
+    {
+        if(n%i==0)
+        {
+            while(n%i==0)
+            {
+                n/=i;
+                cout<<i<<"  ";
+            }
+        }
+
+    }
+    if(n>1)
+        cout<<n<<endl;
+
+    return 0;
+}
+

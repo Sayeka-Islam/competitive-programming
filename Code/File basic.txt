@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    char a[50];
+    string b;
+    fstream f1,f2,f3;
+
+    f1.open("file.txt",ios::out);
+    cin.getline(a,50);
+    if (f1.is_open())
+        cout <<"File open successfully"<<endl;
+    f1<<a;
+    cout<<endl;
+    f1.close();
+
+    f3.open("file.txt",ios::app);
+    cin>>b;
+    f3<<b;
+    f3.close();
+
+    f2.open("file.txt",ios::in);
+    f2.getline(a,50);
+    cout<<a<<endl;
+    f2.close();
+
+
+}

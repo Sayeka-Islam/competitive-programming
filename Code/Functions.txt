@@ -1,0 +1,19 @@
+int gcd(int a,int b)
+{
+    if(b==0)
+        return a;
+    else
+        return gcd(b,a%b);
+}
+
+
+string s1,s2;
+a=strtoull(s1.c_str(),NULL,2);///strtoull(string,end(null),base)
+b=strtoull(s2.c_str(),NULL,2);///(c_str---pointer type..full string)
+
+ int b = atoi(a);	///char array
+sort(a,a+n);
+
+sort(str.begin(), str.end());
+reverse(s.begin(),s.end());
+return ss.compare(s) == 0;
