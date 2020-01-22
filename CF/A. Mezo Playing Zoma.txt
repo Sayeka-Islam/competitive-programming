@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int l=0,r=0,c=0,n;
+    char ch;
+    cin>>n;
+    for(int i=1; i<=n; i++)
+    {
+        cin>>ch;
+        if(ch=='L')
+            l--;
+        else if(ch=='R')
+            r++;
+    }
+    if(l<0)
+        c+=l*(-1);
+    if(r>=0)
+        c+=r+1;
+    cout<<c<<endl;
+}

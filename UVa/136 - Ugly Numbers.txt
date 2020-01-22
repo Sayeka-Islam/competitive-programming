@@ -1,0 +1,58 @@
+/*#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+ll pf[1000];
+
+bool primeFactors(int n)
+{
+    ll in=0;
+    while (n % 2 == 0)
+    {
+        pf[in]=2;
+        n = n/2;
+        in++;
+    }
+    while (n % 3 == 0)
+    {
+        pf[in]=3;
+        n = n/3;
+        in++;
+    }
+    while (n % 5 == 0)
+    {
+        pf[in]=5;
+        n = n/5;
+        in++;
+    }
+
+    return (n==1)? 1:0;
+}
+
+int main()
+{
+            bool ugly;
+    ll n=16,c=11;
+    while(c!=1500)
+    {
+
+        ugly=primeFactors(n);
+
+        if(ugly)
+        {
+            c++;
+            cout<<n<<endl;
+        }
+        n++;
+    }
+    return 0;
+}*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"The 1500'th ugly number is 859963392."<<endl;
+    return 0;
+}

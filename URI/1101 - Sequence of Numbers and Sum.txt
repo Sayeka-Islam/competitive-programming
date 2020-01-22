@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+   int j,x,y,temp;
+    for(;;)
+    { scanf("%d%d",&x,&y);
+    if(x<=0 || y<=0)
+        break;
+    int sum=0;
+    if(x>y)
+    { temp=y;
+        y=x;
+        x=temp;
+    }
+    for(j=x;j<=y;j++){
+         sum+=j;
+       printf("%d ",j);}
+        printf("Sum=%d\n",sum);
+    }
+    return 0;
+}

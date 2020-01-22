@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    int dis;
+    float oil;
+    scanf("%d%f",&dis,&oil);
+    printf("%.3f km/l\n",(dis/oil));
+    return 0;
+}

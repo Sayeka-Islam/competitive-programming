@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+    int i,cp=0,n,cn=0,c_odd=0,c_even=0;
+    for(i=0;i<5;i++)
+    {
+    scanf("%d",&n);
+    if(n>0)
+        cp++;
+    if(n<0)
+            cn++;
+    if(n%2==0)
+    c_even++;
+    if(n%2!=0)
+        c_odd++;
+    }
+    printf("%d valor(es) par(es)\n",c_even);
+    printf("%d valor(es) impar(es)\n",c_odd);
+    printf("%d valor(es) positivo(s)\n",cp);
+    printf("%d valor(es) negativo(s)\n",cn);
+    return 0;
+}

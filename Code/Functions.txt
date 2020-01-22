@@ -16,4 +16,4 @@ sort(a,a+n);
 
 sort(str.begin(), str.end());
 reverse(s.begin(),s.end());
-return ss.compare(s) == 0;
+ss.compare(s) == 0;

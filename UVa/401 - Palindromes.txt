@@ -1,0 +1,73 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int l;
+    string st1,st2,st3;
+    while(cin>>st1)
+    {
+        st2=st1;
+        st3=st1;
+        reverse(st2.begin(),st2.end());
+        l=st3.length();
+        for(int i=0; i<l; i++)
+        {
+            if(st3[i]=='E')
+                st3[i]='3';
+            else if(st3[i]=='3')
+                st3[i]='E';
+            else if(st3[i]=='L')
+                st3[i]='J';
+            else   if(st3[i]=='J')
+                st3[i]='L';
+            else   if(st3[i]=='2')
+                st3[i]='S';
+            else  if(st3[i]=='S')
+                st3[i]='2';
+            else    if(st3[i]=='5')
+                st3[i]='Z';
+            else   if(st3[i]=='Z')
+                st3[i]='5';
+            else   if(st3[i]=='Z')
+                st3[i]='5';
+            else   if(st3[i]=='A')
+                st3[i]='A';
+            else   if(st3[i]=='H')
+                st3[i]='H';
+            else   if(st3[i]=='I')
+                st3[i]='I';
+            else   if(st3[i]=='M')
+                st3[i]='M';
+            else   if(st3[i]=='O')
+                st3[i]='O';
+            else   if(st3[i]=='T')
+                st3[i]='T';
+            else   if(st3[i]=='U')
+                st3[i]='U';
+            else   if(st3[i]=='V')
+                st3[i]='V';
+            else   if(st3[i]=='W')
+                st3[i]='W';
+            else   if(st3[i]=='X')
+                st3[i]='X';
+            else   if(st3[i]=='Y')
+                st3[i]='Y';
+            else   if(st3[i]=='1')
+                st3[i]='1';
+            else   if(st3[i]=='8')
+                st3[i]='8';
+            else
+                st3[i]=' ';
+        }
+        reverse(st3.begin(),st3.end());
+        if(st1!=st2 && st1!=st3)
+            cout<<st1<<" -- is not a palindrome."<<endl<<endl;
+        else if(st1==st2 && st1!=st3)
+            cout<<st1<<" -- is a regular palindrome."<<endl<<endl;
+        else if(st1!=st2 && st1==st3)
+            cout<<st1<<" -- is a mirrored string."<<endl<<endl;
+        else
+            cout<<st1<<" -- is a mirrored palindrome."<<endl<<endl;
+    }
+}

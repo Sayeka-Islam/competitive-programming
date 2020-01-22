@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int pro_n1,pro_u1,pro_n2,pro_u2;
+    float pro_p1,pro_p2;
+    scanf("%d%d%f",&pro_n1,&pro_u1,&pro_p1);
+    scanf("%d%d%f",&pro_n2,&pro_u2,&pro_p2);
+    printf("VALOR A PAGAR: R$ %.2f\n",(pro_u1*pro_p1)+(pro_u2*pro_p2));
+    return 0;
+}

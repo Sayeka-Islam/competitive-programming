@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    char name[20];
+    float salary,sold;
+    scanf("%s%f%f",name,&salary,&sold);
+    printf("TOTAL = R$ %.2f\n",(sold*.15)+salary);
+    return 0;
+}
