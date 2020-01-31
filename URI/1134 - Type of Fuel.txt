@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int f,a=0,g=0,d=0;
+      for(;;)
+        {
+    scanf("%d",&f);
+    if(f==4)
+        break;
+     else if(f==1)
+        a++;
+    else if(f==2)
+        g++;
+    else if(f==3)
+    d++;
+        }
+    printf("MUITO OBRIGADO\nAlcool: %d\nGasolina: %d\nDiesel: %d\n",a,g,d);
+
+   return 0;
+}
+

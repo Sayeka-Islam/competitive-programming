@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int j,k,c=0;
+    scanf("%d",&k);
+    for(;;)
+    {
+        for(j=0;j<k;j++)
+       {printf("N[%d] = %d\n",c,j);
+       c++;
+       if(c==1000)
+        break;}
+       if(c==1000)
+        break;
+    }
+
+      return 0;
+}
+

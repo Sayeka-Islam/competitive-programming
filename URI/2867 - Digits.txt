@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int test,t,n,p;
+    double value;
+    scanf("%d",&test);
+    for(t=1;t<=test;t++)
+    {
+        scanf("%d%d",&n,&p);
+        value=p*log10(n);
+        printf("%d\n",(int)value+1);
+    }
+    return 0;
+}

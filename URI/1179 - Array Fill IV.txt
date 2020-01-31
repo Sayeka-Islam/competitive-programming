@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,k=0,n,even[5],odd[5],p=0,l;
+
+    for(i=0;i<15;i++)
+    {
+           scanf("%d",&n);
+            if(n%2==0)
+        {
+           even[p]=n;
+            p++;
+            if(p==5)
+               {
+                    for(j=0;j<5;j++)
+            printf("par[%d] = %d\n",j,even[j]);
+            p=0;
+
+               }
+        }
+
+        else
+            {
+               odd[k]=n;
+                k++;
+                if(k==5)
+                {
+                      for(j=0;j<5;j++)
+            printf("impar[%d] = %d\n",j,odd[j]);
+            k=0;
+                }
+            }
+    }
+
+        for(l=0;l<k;l++)
+        {
+            printf("impar[%d] = %d\n",l,odd[l]);
+        }
+
+        for(l=0;l<p;l++)
+        {
+            printf("par[%d] = %d\n",l,even[l]);
+        }
+
+    return 0;
+}

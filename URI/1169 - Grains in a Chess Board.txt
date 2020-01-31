@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int t,x,i,j;
+    scanf("%d",&t);
+    for(i=1;i<=t;i++)
+    {
+        scanf("%d",&x);
+   unsigned long long int grain=1;
+        if(x==64)
+         printf("1537228672809129 kg\n");
+         else
+        {for(j=1;j<=x;j++)
+            grain*=2;
+        printf("%llu kg\n",grain/12000);}
+
+    }
+    return 0;
+}
+

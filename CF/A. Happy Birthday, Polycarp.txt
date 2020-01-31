@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    string nm;
+    ll p1,p2;
+    for(int i=0 ; i<t ; i++)
+    {
+        cin>>nm;
+        int l = nm.length();
+        int n = nm[0];
+        n -= 48;
+
+        if(l==1)
+            cout<<nm<<endl;
+        else
+        {
+            p1 = 0;
+            for(int j = 0 ; j<l ; j++)
+            {
+                p1 = p1*10+n;
+            }
+            p2 = strtoull(nm.c_str(),NULL,10);
+            if(p1 <= p2)
+                cout<<9*(l-1)+n<<endl;
+            else
+                cout<<9*(l-1)+n-1<<endl;
+        }
+    }
+}

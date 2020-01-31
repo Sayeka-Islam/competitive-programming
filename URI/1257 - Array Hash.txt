@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int t,i,test,n,j,k;
+    char alp[50];
+    char ch[26]={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+    scanf("%d",&test);
+    for(t=1;t<=test;t++)    
+    {
+        int c1=0,s=0,p=0;
+        scanf("%d",&n);
+        for(i=0;i<n;i++)    
+        {
+            scanf("%s",&alp);
+            for(j=0;j<strlen(alp);j++)   
+            {
+                    for(k=0;k<26;k++)   
+                    {
+                        if(alp[j]==ch[k])
+                        {
+                        c1=k;
+                        break;
+                        }
+                    }
+            p+=c1+i+j;
+        }
+    }
+        s+=p;
+        printf("%d\n",s);
+    }
+    return 0;
+}

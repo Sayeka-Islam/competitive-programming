@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int j;
+    double n;
+    scanf("%lf",&n);
+    printf("N[0] = %.4lf\n",n);
+    for(j=1;j<100;j++)
+    {
+        printf("N[%d] = %.4lf\n",j,n/2);
+        n=n/2;
+    }
+    return 0;
+}

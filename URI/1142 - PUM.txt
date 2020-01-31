@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    int t,i,j;
+    scanf("%d",&t);
+    for(i=-2;i<=(t*4)-3;i++)
+    {        i+=3;
+        for(j=i;j<i+3;j++)
+            printf("%d ",j);
+            printf("PUM\n");
+    }
+    return 0;
+}

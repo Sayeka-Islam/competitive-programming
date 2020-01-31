@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int z,x,i,s=0,c=0;
+    scanf("%d",&x);
+    for(;;)
+    {
+        scanf("%d",&z);
+        if(z>x)
+            break;
+    }
+    for(i=x;i<=z;i++)
+    {c++;
+        s+=x;
+        x++;
+        if(s>z)
+            break;
+    }
+  printf("%d\n",c);
+    return 0;
+}

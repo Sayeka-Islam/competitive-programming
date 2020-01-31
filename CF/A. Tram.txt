@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t,in,out,m=0,s=0;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        cin>>out>>in;
+        s+=in-out;
+        if(s>m)
+            m=s;
+    }
+    cout<<m<<endl;
+}

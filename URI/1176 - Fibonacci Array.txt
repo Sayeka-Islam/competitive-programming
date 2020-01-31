@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int t,x,j;
+    scanf("%d",&t);
+    for(j=1;j<=t;j++)
+    {
+    scanf("%d",&x);
+   long long int i=0,a=0,b=1,c;
+    for(;;)
+    {
+        if(i==x)
+            break;
+        c=a+b;
+        a=b;
+        b=c;
+        i++;
+    }
+    printf("Fib(%lld) = %lld\n",i,a);
+    }
+    return 0;
+}
+

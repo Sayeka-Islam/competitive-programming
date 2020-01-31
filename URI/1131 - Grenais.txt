@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,x,i=0,g=0,e=0,c=1;
+    for(;;)
+        {
+        scanf("%d%d",&a,&b);
+        if(a>b)
+            i++;
+        else if(a<b)
+            g++;
+        else
+            e++;
+        printf("Novo grenal (1-sim 2-nao)\n");
+    scanf("%d",&x);
+
+    if(x==1)
+        {c++;
+            continue;}
+
+         else if(x==2)
+            break;}
+            printf("%d grenais\nInter:%d\nGremio:%d\nEmpates:%d\n",c,i,g,e);
+            if(i>g)
+            printf("Inter venceu mais\n");
+        else if(i<g)
+            printf("Gremio venceu mais\n");
+        else
+            printf("Nao houve vencedor\n");
+    return 0;
+}

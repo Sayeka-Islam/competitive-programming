@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int l,r,c;
+    float x[12][12],s=0;
+    char ch;
+    scanf("%d",&l);
+    scanf(" %c",&ch);
+    for(r=0;r<12;r++)
+    {
+        for(c=0;c<12;c++)
+        {
+            scanf("%f",&x[r][c]);
+            if(l==r)
+            s+=x[r][c];
+         }
+    }
+    if(ch=='S')
+        printf("%.1f\n",s);
+    else if(ch=='M')
+    printf("%.1f\n",s/12);
+
+    return 0;
+}

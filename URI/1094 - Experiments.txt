@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+   int t,i,m,sum=0,c=0,r=0,s=0;
+   char a;
+   scanf("%d",&t);
+    for(i=0;i<t;i++)
+    { scanf("%d %c",&m,&a);
+    sum+=m;
+    if(a=='C')
+        c+=m;
+   else if(a=='R')
+        r+=m;
+      else if(a=='S')
+        s+=m;
+    }
+    printf("Total: %d cobaias\nTotal de coelhos: %d\nTotal de ratos: %d\nTotal de sapos: %d\n",sum,c,r,s);
+    printf("Percentual de coelhos: %.2f %%\n",100.0*c/sum);
+    printf("Percentual de ratos: %.2f %%\n",100.0*r/sum);
+    printf("Percentual de sapos: %.2f %%\n",s*100.0/sum);
+    return 0;
+}

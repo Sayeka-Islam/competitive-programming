@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+     float n,av=0;
+    int c=0,x;
+     for(;;)
+    {
+        scanf("%f",&n);
+        if(n>=0 && n<=10)
+        {c++;
+            av+=n;}
+        else
+        printf("nota invalida\n");
+  if(c==2)
+            {printf("media = %.2f\nnovo calculo (1-sim 2-nao)\n",av/2);
+          for(;;)  {scanf("%d",&x);
+          if(x==1 || x==2)
+            break;
+          else
+               printf("novo calculo (1-sim 2-nao)\n");
+          }
+            if(x==1)
+            {av=0;
+                c=0;
+                continue;}
+            else if(x==2)
+                break;
+                }
+    }
+
+    return 0;
+}

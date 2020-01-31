@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+   long long int i,n,s=1;
+   scanf("%lld",&n);
+   for(i=n;i>=1;i--)
+       s*=i;
+   printf("%lld\n",s);
+   return 0;
+}

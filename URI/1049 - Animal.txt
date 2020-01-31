@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char ch1[20],ch2[20],ch3[20];
+       scanf("%s%s%s",ch1,ch2,ch3);
+    if(strcmp(ch1,"vertebrado")==0)
+    {
+        if(strcmp(ch2,"ave")==0 && strcmp(ch3,"carnivoro")==0)
+         printf("aguia\n");
+         else if(strcmp(ch2,"ave")==0 &&strcmp(ch3,"onivoro")==0)
+         printf("pomba\n");
+         else if(strcmp(ch2,"mamifero")==0 && strcmp(ch3,"onivoro")==0)
+         printf("homem\n");
+         else if(strcmp(ch2,"mamifero")==0 && strcmp(ch3,"herbivoro")==0)
+             printf("vaca\n");
+    }
+
+    else if(strcmp(ch1,"invertebrado")==0)
+    {
+        if(strcmp(ch2,"inseto")==0 && strcmp(ch3,"hematofago")==0)
+         printf("pulga\n");
+         else if(strcmp(ch2,"inseto")==0 && strcmp(ch3,"herbivoro")==0)
+         printf("lagarta\n");
+         else if(strcmp(ch2,"anelideo")==0 && strcmp(ch3,"hematofago")==0)
+         printf("sanguessuga\n");
+         else if(strcmp(ch2,"anelideo")==0 && strcmp(ch3,"onivoro")==0)
+             printf("minhoca\n");
+    }
+
+    return 0;
+}

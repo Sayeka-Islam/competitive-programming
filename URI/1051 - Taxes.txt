@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    float t;
+    scanf("%f",&t);
+    if(t>=0 && t<=2000)
+        printf("Isento\n");
+    else if(t>=2000.01 && t<=3000.00)
+        printf("R$ %.2f\n",(t-2000)*.08);
+    else if(t>=3000.01 && t<=4500.00)
+        printf("R$ %.2f\n",(t-3000)*.18+80);
+    else
+        printf("R$ %.2f\n",(t-4500)*.28+350);
+   return 0;
+}
