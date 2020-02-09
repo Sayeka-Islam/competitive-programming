@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,a1,a2,a3,b1,b2,b3,m=0,cup=0,c=0;
+    cin>>a1>>a2>>a3>>b1>>b2>>b3>>n;
+    cup = a1+a2+a3;
+    m = b1+b2+b3;
+    while(cup > 0 )
+    {
+        cup -= 5;
+        c++;
+    }
+    while(m > 0)
+    {
+        m -= 10;
+        c++;
+    }
+    if(c > n)
+        cout<<"NO"<<endl;
+    else
+        cout<<"YES"<<endl;
+}
