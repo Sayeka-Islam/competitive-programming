@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+#define ll long
+using namespace std;
+int main()
+{
+    ll l, m, n, k, d, sum = 0;
+    cin>>l>>m>>n>>k>>d;
+    for(int i=1; i<=d; i++)
+    {
+        if(i%l == 0 || i%m == 0 ||i%n == 0 || i%k == 0)
+            sum++;
+    }
+        cout<<sum<<endl;
+    return 0;
+}

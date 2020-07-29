@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a[4],b[4],alice=0,bob=0;
+    cin>>a[0]>>a[1]>>a[2]>>b[0]>>b[1]>>b[2];
+    for(int i=0;i<3;i++)
+    {
+        if(a[i]<b[i])
+        bob++;
+       if(a[i]>b[i])
+        alice++; 
+    }
+    cout<<alice<<" "<<bob<<endl;
+}

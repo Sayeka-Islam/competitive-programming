@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n,v,arr[101][101],ad1 = 0,ad2 = 0;
+    cin>>n;
+    v = n-1;
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cin>>arr[i][j];
+            if(i == j)
+                ad1 +=arr[i][j];
+            if(v == j)
+            {
+                ad2 +=arr[i][j];
+                v--;
+            }
+        }
+    }
+    v = ad1 -ad2;
+    if(v < 0)
+        v *= -1;
+    cout<<v<<endl;
+    return 0;
+}

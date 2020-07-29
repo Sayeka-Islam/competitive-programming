@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int test;
+    string st;
+
+    cin>>test;
+    for(int t =0; t<test; t++)
+    {
+        stack<char>ch;
+        cin>>st;
+        int len=st.length();
+        bool f;
+        for(int i=0; i<len; i++)
+        {
+            f = 0;
+            if(st[i] == '[' || st[i] == '(' || st[i] == '{')
+                ch.push(st[i]);
+            else if(ch.empty())
+            {
+                f = 1;
+                break;
+            }
+            else if(st[i] == ')')
+            {
+                if(ch.top() == '(')
+                    ch.pop();
+                else
+                {
+                    f = 1;
+                    break;
+                }
+            }
+            else if( st[i] == '}')
+            {
+                if(ch.top() == '{')
+                    ch.pop();
+                else
+                {
+                    f = 1;
+                    break;
+                }
+            }
+            else if(st[i] == ']')
+            {
+                if(ch.top() == '[')
+                    ch.pop();
+                else
+                {
+                    f = 1;
+                    break;
+                }
+            }
+
+        }
+        if(ch.empty() && f == 0)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+    }
+}
+

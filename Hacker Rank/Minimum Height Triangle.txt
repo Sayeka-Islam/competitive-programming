@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,b,h;
+    cin>>b>>a;
+    h = ((a*2)/b);
+    if((h*0.5*b) >= a)
+        cout<<h<<endl;
+    else
+        cout<<h+1<<endl;
+    return 0;
+}

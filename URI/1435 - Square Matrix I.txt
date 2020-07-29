@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    while(cin>>n,n)
+    {
+        for(int i=1; i <= n; i++)
+        {
+            for(int j=1; j <= n; j++)
+            {
+                int c = i;
+
+                if(j < c)
+                    c = j;
+                if(n-i+1 < c)
+                    c = n-i+1;
+                if(n-j+1 < c)
+                    c = n-j+1;
+
+                printf("%3d",c);
+                if(j < n)
+                cout<<" ";
+            }
+                cout<<endl;
+        }
+        cout<<endl;
+    }
+}

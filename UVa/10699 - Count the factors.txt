@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int primeFactors(ll n)
+{
+    ll c=0;
+    while (n % 2 == 0)
+    {
+        c = 1;
+        n /= 2;
+    }
+    for (int i = 3; i <= sqrt(n); i+= 2)
+    {
+        if(n%i== 0)
+        {
+            c++;
+            while (n % i == 0)
+            {
+                n /= i;
+            }
+        }
+    }
+    if (n > 2)
+    {
+        c++;
+    }
+    return c;
+}
+int main()
+{
+    ll n;
+    while(cin>>n,n)
+    {
+        cout << n << " : " << primeFactors(n) << endl;
+
+    }
+}

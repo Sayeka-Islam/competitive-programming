@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int onedigit(int n)
+{
+    int s = 0;
+    while(n != 0)
+    {
+        s += n % 10;
+        n /= 10;
+    }
+    return s;
+}
+
+int main()
+{
+    string  st1,st2;
+    while(getline(cin,st1))
+    {
+        getline(cin,st2);
+        int l1, l2, c1 = 0, c2 = 0;
+        l1 = st1.length();
+        l2 = st2.length();
+        for(int i = 0; i<l1 ; i++)
+        {
+            if(st1[i] >= 'A'&& st1[i] <='Z')
+            {
+                c1 += st1[i] - 'A' + 1;
+            }
+
+            if(st1[i] >= 'a'&& st1[i] <='z')
+            {
+                c1 += st1[i] - 'a' + 1;
+            }
+
+        }
+        for(int i = 0; i<l2 ; i++)
+        {
+            if(st2[i] >= 'A'&& st2[i] <='Z')
+            {
+                c2 += st2[i] - 'A' + 1;
+            }
+            if(st2[i] >= 'a'&& st2[i] <='z')
+            {
+                c2 += st2[i] - 'a' + 1;
+            }
+        }
+
+        c1 = onedigit(c1);
+        c2 = onedigit(c2);
+        while(c1 > 9)
+            c1 = onedigit(c1);
+        while(c2 > 9)
+            c2 = onedigit(c2);
+        double s1 = c1;
+        double s2 = c2;
+        if(s1 > s2)
+            printf("%.2lf %%\n",(s2/s1)*100.0);
+        else
+            printf("%.2lf %%\n",(s1/s2)*100.0);
+    }
+
+}

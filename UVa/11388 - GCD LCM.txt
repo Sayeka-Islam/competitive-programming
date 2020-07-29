@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+ll gcd(ll a,ll b)
+{
+    if(b==0)
+        return a;
+    else
+        return gcd(b,a%b);
+}
+
+int main()
+{
+    ll g,l,t, a,b;
+    cin >> t;
+    while(t--)
+    {
+        cin >> g >> l;
+        a =gcd(g,l);
+        b = g*l/a;
+        if( a==g && b==l)
+        cout<<g<<" "<<l<<endl;
+        else
+        cout<<"-1"<<endl;
+    }
+
+}
