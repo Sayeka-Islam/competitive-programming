@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int main()
+{
+    vector <ll> arr;
+
+    int n, q;
+    cin>>n;
+
+    ll in;
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>in;
+        arr.push_back(in);
+    }
+
+    cin>>q;
+    for(int i=0; i<q; i++)
+    {
+        cin>>in;
+        vector<ll>::iterator it= lower_bound(arr.begin(), arr.end(), in);
+
+        if(arr[it-arr.begin()] == in)
+            cout<<"Yes "<<(it-arr.begin()+1)<<endl;
+        else
+            cout<<"No "<<(it-arr.begin()+1)<<endl;
+
+    }
+}
+

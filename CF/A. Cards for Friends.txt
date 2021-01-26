@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+ll paper_cut(int n, ll p, ll c)
+{
+    while(n%2 == 0)
+    {
+        if(c == p)
+            return c;
+        c*=2;
+        n/=2;
+    }
+    return c;
+}
+
+int main()
+{
+    int t, w, h;
+    cin>>t;
+    ll n;
+    while(t--)
+    {
+        cin>>w>>h>>n;
+        ll c = 1;
+        c = paper_cut(w, n, c);
+        if(c != n)
+            c = paper_cut(h, n, c);
+
+        if(c >= n)
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+
+    }
+}

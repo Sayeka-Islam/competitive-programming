@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    double arr[n], m = 0, sd = 0;
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>arr[i];
+        m += arr[i];
+    }
+
+    m /= n;
+
+    for(int i=0; i<n; i++)
+        sd += (arr[i]-m)*(arr[i]-m);
+
+    sd = sqrt(sd/n);
+    printf("%.1lf\n",sd);
+}

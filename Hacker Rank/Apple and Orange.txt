@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int s, e, a, o, dis_a, dis_o, n;
+    cin>>s>>e>>a>>o>>dis_a>>dis_o;
+    int a_c = 0;
+    while(dis_a--)
+    {
+        cin>>n;
+        n+=a;
+        if(n>=s && n<=e)
+            a_c++;
+    }
+
+    int o_c = 0;
+    while(dis_o--)
+    {
+        cin>>n;
+        n+=o;
+        if(n>=s && n<=e)
+            o_c++;
+    }
+    cout<<a_c<<endl;
+    cout<<o_c<<endl;
+}

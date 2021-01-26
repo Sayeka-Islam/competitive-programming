@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+
+int main()
+{
+    int t, h = 0, l = 0;
+    cin>>t;
+    ll in, temp;
+    stack<ll> hs, ls;
+
+    cin>>in;
+    hs.push(in);
+    ls.push(in);
+    t--;
+
+    while(t--)
+    {
+        cin>>in;
+        if(in > hs.top())
+        {
+            hs.push(in);
+            h++;
+        }
+        else
+        {
+            temp = hs.top();
+            hs.push(temp);
+        }
+
+        if(in < ls.top())
+        {
+            ls.push(in);
+            l++;
+        }
+        else
+        {
+            temp = ls.top();
+            ls.push(temp);
+        }
+    }
+    cout<<h<<" "<<l<<endl;
+}

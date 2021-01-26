@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    map<string, int> mp;
+    string st;
+    int q, y, in;
+    cin>>q;
+
+    for(int i=0; i<q; i++)
+    {
+        cin>>y>>st;
+        map <string, int> ::iterator it= mp.find(st);
+
+        if(y == 1)
+        {
+            cin>>in;
+            if(it->first == st)
+            {
+                in += it->second;
+                mp[st] = in;
+            }
+            else
+                mp[st]=in;
+        }
+
+        else if(y == 2)
+            mp.erase(st);
+
+        else
+        {
+            if(it->first == st)
+                cout<<it->second<<endl;
+            else
+                cout<<"0"<<endl;
+
+        }
+    }
+}

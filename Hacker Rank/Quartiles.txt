@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+
+    for(int i=0; i<n; i++)
+        cin>>arr[i];
+
+    sort(arr, arr+n);
+
+    int q1 = arr[n/4];
+    int q2 = arr[n/2];
+    int q3 = arr[n-(n/4+1)];
+
+    if(!(n&1))
+        q2 = (arr[n/2]+ arr[n/2-1])/2;
+
+
+    if(((n - (n % 2)) / 2) % 2 == 0)
+    {
+        q1 = (q1+ arr[n/4-1])/2;
+        q3 = (q3+arr[n-n/4])/2;
+    }
+
+    cout<<q1<<endl;
+    cout<<q2<<endl;
+    cout<<q3<<endl;
+}

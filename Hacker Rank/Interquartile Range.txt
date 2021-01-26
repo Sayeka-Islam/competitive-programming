@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, j=0;
+    cin>>n;
+    double s[n], arr[5000], f;
+
+    for(int i=0; i<n; i++)
+    {
+        cin>>s[i];
+    }
+    for(int i=0; i<n; i++)
+    {
+        cin>>f;
+        while(f--)
+        {
+            arr[j]=s[i];
+            j++;
+        }
+    }
+    n = j;
+    sort(arr, arr+n);
+
+    double q1 = arr[n/4];
+    double q2 = arr[n/2];
+    double q3 = arr[n-(n/4+1)];
+
+    if(!(n&1))
+        q2 = (arr[n/2]+ arr[n/2-1])/2;
+
+
+    if(((n - (n % 2)) / 2) % 2 == 0)
+    {
+        q1 = (q1+ arr[n/4-1])/2;
+        q3 = (q3+arr[n-n/4])/2;
+    }
+
+    printf("%.1lf\n", q3-q1);
+}

@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t, grd, temp;
+    cin>>t;
+    while(t--)
+    {
+        cin>>grd;
+
+        if((grd+1)%5==0 && grd>=38)
+            cout<<grd+1<<endl;
+        else if((grd+2)%5==0 && grd>=38)
+            cout<<grd+2<<endl;
+        else
+            cout<<grd<<endl;
+    }
+}
