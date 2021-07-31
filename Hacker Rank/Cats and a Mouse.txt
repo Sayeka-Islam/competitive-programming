@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t, a, b, c, dis_a, dis_b;
+    cin>>t;
+
+    while(t--)
+    {
+        cin>>a>>b>>c;
+        dis_a = a-c;
+        if(dis_a < 0)
+            dis_a *= -1;
+        dis_b = b-c;
+        if(dis_b < 0)
+            dis_b *= -1;
+
+        if(dis_a == dis_b)
+            cout<<"Mouse C"<<endl;
+        else if(dis_a < dis_b)
+            cout<<"Cat A"<<endl;
+        else
+            cout<<"Cat B"<<endl;
+    }
+}
