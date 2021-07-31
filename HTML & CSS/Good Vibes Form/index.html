@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Pen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <h1 class="title">Good Vibes Form</h1>
+        <div class="main-box">
+            <p class="discription">Tell us something positive that happened to you today.</p>
+            <form>
+                <div class="row">
+                    <label for="name">Name</label>
+                    <div class="form">
+                        <input type="text" name="text" placeholder="Enter your name">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <div class="form">
+                        <input type="email" name="email" placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="scale"> On a scale of 1-10, how good was it?</label>
+                    <div class="form">
+                        <input type="number" name="scale" placeholder="Enter a number between 1 and 10" max="10" min="1"
+                            step="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="place"> Where did it happen?</label>
+                    <div class="form">
+                        <select name="place" id="place">
+                            <option value="home">At home</option>
+                            <option value="commute">On my commute</option>
+                            <option value="work">At work</option>
+                            <option value="street">On the Street</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="time">At what time of day did it happen?</label>
+                    <div class="form">
+                        <li> <input type="radio" name="time" value="Morning">Morning </li>
+                        <li> <input type="radio" name="time" value="Afternoon">Afternoon </li>
+                        <li> <input type="radio" name="time" value="Evening">Evening </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="emotion">What emotions did you experience?
+                        (Select all that apply)</label>
+                    <div class="form">
+                        <li> <input type="checkbox" name="emotion" value="Excited">Excited </li>
+                        <li> <input type="checkbox" name="emotion" value="Humbled">Humbled </li>
+                        <li> <input type="checkbox" name="emotion" value="Elated">Elated </li>
+                        <li> <input type="checkbox" name="emotion" value="Loved">Loved </li>
+                        <li> <input type="checkbox" name="emotion" value="Enthusiastic">Enthusiastic </li>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="experience">Please describe your positive experience.</label>
+                    <div class="form">
+                        <textarea name="experience" id="experience" cols="30" rows="3"
+                            placeholder="Enter your experience here..."></textarea>
+                    </div>
+                </div>
+                <input type="submit">
+        </div>
+        </form>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
